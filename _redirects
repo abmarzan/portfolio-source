@@ -1,3 +1,10 @@
+# Backend files must never be public: source, models, tools, user job results, logs.
+/mirna/backend_api/*                         /404  404!
+/mirna/converted_to_notepad/app.txt          /404  404!
+/notepad/all/mirna/backend_api/*             /404  404!
+/notepad/converted_to_notepad/mirna/backend_api/*  /404  404!
+/notepad/converted_to_notepad/mirna/backend_api/app.txt  /404  404!
+
 # Permanent domain migration: aamarzan.com -> marzan.org
 # Preserve every path and query string.
 
