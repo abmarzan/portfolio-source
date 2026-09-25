@@ -1439,6 +1439,7 @@ async function handleSubmit(event){
 
     const poll = async () => {
       const res = await fetch(PROGRESS_URL(job_id), { method:'GET' });
+      if(res.status === 404) throw new Error('The server was restarted while your job was running, so it was lost. Please click Run Prediction again.');
       if(!res.ok) throw new Error('Failed to check job progress.');
       const data = await res.json();
 
@@ -1451,14 +1452,16 @@ async function handleSubmit(event){
             loader.innerHTML = `<span class="loader-spinner"></span><span id="loader-text"></span>`;
           }
           const lt = loader.querySelector('#loader-text');
-          if(lt) lt.textContent = `Processing... ${completed}/${total} completed`;
+          if(lt) lt.textContent = (data.queue_position > 0)
+            ? `Queued: you are number ${data.queue_position} in line. Your analysis starts automatically, please keep this page open.`
+            : `Processing... ${completed}/${total} completed`;
           show(loader);
         }
 
         // stall hint if progress hasn't changed for 180s
         if(Number.isFinite(completed) && completed !== lastCompleted){
           lastCompleted = completed; lastTick = Date.now();
-        }else if(Date.now() - lastTick > 180000){
+        }else if(!(data.queue_position > 0) && Date.now() - lastTick > 180000){
           const friendly = [
             'Still working — this is taking longer than usual.',
             'Please keep this page open; closing it will stop the analysis.',

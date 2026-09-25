@@ -1063,7 +1063,16 @@ def _build_heatmap_bytes_for_row(job: Dict, row: Dict, mode: str = 'ig_target', 
 # =========================
 # Prediction & analysis endpoints
 # =========================
-limiter = Limiter(key_func=get_remote_address)
+def _client_key():
+    """Visitor identity for rate limiting. Behind the Cloudflare Worker / tunnel every request arrives from
+    the proxy, so use the forwarded client IP when present."""
+    h = request.headers
+    return (h.get("X-Client-IP") or h.get("CF-Connecting-IP")
+            or (h.get("X-Forwarded-For") or "").split(",")[0].strip()
+            or get_remote_address())
+
+
+limiter = Limiter(key_func=_client_key)
 limiter.init_app(app)
 
 
@@ -1657,7 +1666,7 @@ def start_prediction():
     send_ga_event("prediction_started", {"total": _total})
 
     threading.Thread(
-        target=process_job,
+        target=_queued_process_job,
         args=(job_id, primary_records, targets_list, competitors_list,
               target_3d_path, competitor_3d_path, {}, tmp_paths_to_cleanup,
               convert_aa_to_nt_flag, mature_trim_flag),
@@ -1665,6 +1674,35 @@ def start_prediction():
     ).start()
 
     return jsonify({"job_id": job_id, "status": "started"})
+
+
+MAX_CONCURRENT_JOBS = int(os.getenv("MAX_CONCURRENT_JOBS", "0"))  # 0 = unlimited (local default)
+_job_slots = threading.BoundedSemaphore(MAX_CONCURRENT_JOBS) if MAX_CONCURRENT_JOBS > 0 else None
+_queue_lock = threading.Lock()
+_queue_order: List[str] = []   # job ids waiting for a free slot, oldest first
+
+
+def _queue_position(job_id: str) -> int:
+    """1 = next to run, 0 = not waiting."""
+    with _queue_lock:
+        return (_queue_order.index(job_id) + 1) if job_id in _queue_order else 0
+
+
+def _queued_process_job(job_id, *args):
+    if _job_slots is None:
+        return process_job(job_id, *args)
+    with _queue_lock:
+        _queue_order.append(job_id)
+    try:
+        _job_slots.acquire()          # waits here while other jobs use all slots
+    finally:
+        with _queue_lock:
+            if job_id in _queue_order:
+                _queue_order.remove(job_id)
+    try:
+        process_job(job_id, *args)
+    finally:
+        _job_slots.release()
 
 
 def process_job(job_id: str,
@@ -1955,6 +1993,7 @@ def get_progress(job_id):
         "total": job["total"],
         "error": job["error"],
         "warnings": job.get("warnings", []),
+        "queue_position": _queue_position(job_id),
         "results": job["results"] if job["status"] == "completed" else []
     })
 
