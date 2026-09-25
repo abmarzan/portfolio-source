@@ -29,5 +29,5 @@ This website was built from scratch using pure HTML, CSS, and JavaScript to serv
 - **LinkedIn:** [linkedin.com/in/abdullah-al-marzan-896a43187](https://www.linkedin.com/in/abdullah-al-marzan-896a43187/)
 - **Google Scholar:** [scholar.google.com/citations?user=Xvc4eokAAAAJ](https://scholar.google.com/citations?hl=en&user=Xvc4eokAAAAJ)
 - **ResearchGate:** [researchgate.net/profile/Abdullah-Marzan](https://www.researchgate.net/profile/Abdullah-Marzan)
-- **GitHub:** [github.com/abdullah-al-marzan](https://github.com/abdullah-al-marzan)
+- **GitHub:** [github.com/abmarzan](https://github.com/abmarzan)
 - **Email:** [marzansust16@gmail.com](mailto:marzansust16@gmail.com)
