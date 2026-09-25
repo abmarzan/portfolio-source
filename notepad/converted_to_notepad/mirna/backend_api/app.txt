@@ -86,8 +86,8 @@ app = Flask(__name__)
 app.config['MAX_CONTENT_LENGTH'] = MAX_CONTENT_MB * 1024 * 1024  # 100 MB default
 
 CORS(app, origins=[
-  "https://aamarzan.com",
-  "https://www.aamarzan.com",
+  "https://marzan.org",
+  "https://marzan.org",
   "https://mirna.aamarzan.com",
   "http://localhost",
   "http://127.0.0.1"

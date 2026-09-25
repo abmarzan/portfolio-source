@@ -7,7 +7,7 @@
 
   <meta name="description" content="miRNA-Affinity Predictor"/>
   <meta name="author" content="Abdullah Al Marzan"/>
-  <link rel="canonical" href="https://aamarzan.com/mirna"/>
+  <link rel="canonical" href="https://marzan.org/mirna"/>
   <meta name="theme-color" content="#000000"/>
 
   <!-- Favicons -->

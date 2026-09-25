@@ -6,7 +6,7 @@
     <title>Articles | Abdullah Al Marzan</title>
     <meta name="description" content="A comprehensive list of peer-reviewed publications, articles, and presentations by Abdullah Al Marzan in journals like Scientific Reports, Environmental Pollution, and Frontiers in Pharmacology.">
     <meta name="author" content="Abdullah Al Marzan">
-    <link rel="canonical" href="https://aamarzan.com/articles/" />
+    <link rel="canonical" href="https://marzan.org/articles/" />
 
     <link rel="icon" type="image/png" href="../favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="../favicon/favicon.svg" />

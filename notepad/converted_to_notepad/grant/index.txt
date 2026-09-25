@@ -6,7 +6,7 @@
     <title>Grants & Achievements | Abdullah Al Marzan</title>
     <meta name="description" content="View the research grants and fellowships awarded to Abdullah Al Marzan, including the National Science and Technology (NST) Fellowship from the Ministry of Science and Technology, Bangladesh.">
     <meta name="author" content="Abdullah Al Marzan">
-    <link rel="canonical" href="https://aamarzan.com/grant/" />
+    <link rel="canonical" href="https://marzan.org/grant/" />
 
     <link rel="icon" type="image/png" href="../favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="../favicon/favicon.svg" />

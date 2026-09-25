@@ -6,7 +6,7 @@
     <title>Wastewater-Based Surveillance for SARS-CoV-2 | Blog</title>
     <meta name="description" content="Exploring a new framework for wastewater-based epidemiological surveillance (WBE) to monitor SARS-CoV-2 prevalence in developing countries with onsite sanitation facilities.">
     <meta name="author" content="Abdullah Al Marzan">
-    <link rel="canonical" href="https://aamarzan.com/post-4/" />
+    <link rel="canonical" href="https://marzan.org/post-4/" />
 
     <link rel="icon" type="image/png" href="../favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="../favicon/favicon.svg" />
@@ -100,7 +100,7 @@
                 <div id="disqus_thread">
                 <script>
                     var disqus_config = function () {
-                        this.page.url = 'https://aamarzan.com/../post-4/';  // Use the new page URL
+                        this.page.url = 'https://marzan.org/../post-4/';  // Use the new page URL
                         this.page.identifier = 'post4'; // Use a new unique identifier
                     };
                     (function() { // DON'T EDIT BELOW THIS LINE

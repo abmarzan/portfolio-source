@@ -6,7 +6,7 @@
     <title>Ongoing Projects | Abdullah Al Marzan</title>
     <meta name="description" content="View the current research projects of Abdullah Al Marzan, including work on early diagnosis of PROM, clinical data management for Phase III trials, and deep learning frameworks for HIV.">
     <meta name="author" content="Abdullah Al Marzan">
-    <link rel="canonical" href="https://aamarzan.com/ongoing-projects/" />
+    <link rel="canonical" href="https://marzan.org/ongoing-projects/" />
 
     <link rel="icon" type="image/png" href="../favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="../favicon/favicon.svg" />
@@ -125,8 +125,8 @@
 
     <section id="deep-learning" class="content-section project-section animate-on-scroll">
         <div class="container project-details">
-            <h2 class="animated-title"><a href="https://aamarzan.com/mirna/" target="_blank" rel="noopener">3. Deep Learning Framework for Predicting miRNA–RRE Binding in HIV</a></h2>
-            <div class="image-container" data-link="https://aamarzan.com/mirna/" target="_blank" rel="noopener">
+            <h2 class="animated-title"><a href="https://marzan.org/mirna/" target="_blank" rel="noopener">3. Deep Learning Framework for Predicting miRNA–RRE Binding in HIV</a></h2>
+            <div class="image-container" data-link="https://marzan.org/mirna/" target="_blank" rel="noopener">
                 <img src="../media/ongoing/Project 3. Advanced Deep Learning Model created by Abdullah Al Marzan.jpg" alt="Advanced Deep Learning Model created by Abdullah Al Marzan" class="project-image">
             </div>
             <p><strong>Role:</strong> Lead Bioinformatician</p>

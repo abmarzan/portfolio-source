@@ -4,7 +4,7 @@
 
 This repository contains the complete source code for the professional portfolio of Abdullah Al Marzan, a Molecular Biologist and Bioinformatician.
 
-**Live Website:** **[https://www.aamarzan.com/](https://www.aamarzan.com/)**
+**Live Website:** **[https://marzan.org/](https://marzan.org/)**
 
 ---
 

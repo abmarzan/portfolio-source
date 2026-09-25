@@ -6,7 +6,7 @@
     <title>Probing the Network Between Cancer and Type-2 Diabetes | Blog</title>
     <meta name="description" content="An in-depth look at the bioinformatics analysis linking Type-2 Diabetes with various carcinomas, identifying key hub proteins and microRNAs as potential biomarkers for early cancer detection.">
     <meta name="author" content="Abdullah Al Marzan">
-    <link rel="canonical" href="https://aamarzan.com/post-1/" />
+    <link rel="canonical" href="https://marzan.org/post-1/" />
 
     <link rel="icon" type="image/png" href="../favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="../favicon/favicon.svg" />
@@ -108,7 +108,7 @@
                     * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
                     
                     var disqus_config = function () {
-                        this.page.url = 'https://aamarzan.com/../post-1/';  // This tells Disqus the exact page
+                        this.page.url = 'https://marzan.org/../post-1/';  // This tells Disqus the exact page
                         this.page.identifier = 'post1'; // This gives the page a unique ID
                     };
                     

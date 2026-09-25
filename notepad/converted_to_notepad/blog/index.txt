@@ -6,7 +6,7 @@
     <title>Blog | Abdullah Al Marzan</title>
     <meta name="description" content="The Research Log: Insights, analyses, and reflections from Abdullah Al Marzan's journey at the intersection of molecular biology and computational science.">
     <meta name="author" content="Abdullah Al Marzan">
-    <link rel="canonical" href="https://aamarzan.com/blog/" />
+    <link rel="canonical" href="https://marzan.org/blog/" />
 
     <link rel="icon" type="image/png" href="../favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="../favicon/favicon.svg" />
