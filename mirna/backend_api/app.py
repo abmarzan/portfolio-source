@@ -144,6 +144,9 @@ if Compress:
 
 CORS(app,
      origins=[
+       "https://marzan.org",
+       "https://www.marzan.org",
+       "https://mirna.marzan.org",
        "https://aamarzan.com",
        "https://www.aamarzan.com",
        "https://mirna.aamarzan.com",

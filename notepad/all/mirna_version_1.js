@@ -5,7 +5,7 @@ let predictionResults = [];
 
 // === CONFIGURE API BASE URL ===
 const LOCAL_API = "http://127.0.0.1:8080/predict";
-const PROD_API = "https://mirna.aamarzan.com/predict";
+const PROD_API = "https://mirna.marzan.org/predict";
 const API_URL = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"
     ? LOCAL_API
     : PROD_API;
