@@ -1,6 +1,6 @@
 // sw.js — Advanced but minimal
 
-const CACHE_VERSION = 'v4';
+const CACHE_VERSION = 'v5';
 const CACHE_NAME = `marzan-portfolio-${CACHE_VERSION}`;
 
 // Core assets to precache (no query strings here)
